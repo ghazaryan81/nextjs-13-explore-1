@@ -1,0 +1,23 @@
+@use "@/styles/abstracts/mixins" as *;
+
+.icon-width {
+ &-35 {
+  @include wh(35%, auto);
+ }
+
+ &-40 {
+  @include wh(40%, auto);
+ }
+
+ &-45 {
+  @include wh(45%, auto);
+ }
+
+ &-50 {
+  @include wh(50%, auto);
+ }
+}
+
+.sprite-icon {
+ aspect-ratio: 1 / 1;
+}

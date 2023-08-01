@@ -1,0 +1,40 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin nav-bar {
+ .nav-bar {
+  text-decoration: none;
+  width: 100%;
+  min-height: clamp(calc(7.8rem * var(--global--resize-ratio)), vw(7.8rem), 7.8rem);
+  background: rgba(var(--color--blue-100--clean), 0.25);
+
+  &__row {
+   text-decoration: none;
+  }
+
+  &__col {
+   text-decoration: none;
+
+   &--1 {
+    text-decoration: none;
+   }
+
+   &--2 {
+    text-decoration: none;
+   }
+  }
+ }
+}
+
+@include nav-bar;

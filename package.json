@@ -1,0 +1,77 @@
+{
+ "name": "nextjs-13-explore-1",
+ "version": "0.1.0",
+ "private": true,
+ "description": "",
+ "homepage": "https://github.com/ghazaryan81/nextjs-13-explore-1.git",
+ "author": "Hayk Ghazaryan <hovhannesi.hayk.ghazaryan.81@gmail.com> (https://github.com/ghazaryan81/nextjs-13-explore-1.git)",
+ "keywords": [
+  "nextjs-13-explore-1",
+  "NextJS"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+ssh@github.com:ghazaryan81/nextjs-13-explore-1.git"
+ },
+ "bugs": {
+  "url": "https://github.com/ghazaryan81/nextjs-13-explore-1/issues/",
+  "email": "hovhannesi.hayk.ghazaryan.81@gmail.com"
+ },
+ "scripts": {
+  "dev": "concurrently \"npm run killport\" \"npm run next:dev\" \"npm run json-to-scss\" \"npm run mock\"",
+  "next:dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "json-to-scss": "nodemon --watch ./src/styles/abstracts/_variables.js --exec npm run run:json-to-scss",
+  "data1": "npx json-server -w ./src/data/menu.json -p 4001",
+  "data2": "npx json-server -w ./src/data/todo.json -p 4002",
+  "mock": "npx json-server -w ./src/data/mock.json -p 4003",
+  "run:json-to-scss": "npx json-to-scss ./src/styles/abstracts/_variables.js",
+  "killport": "kill-port --port 4001, 4002, 4003, 3000",
+  "prepare": "husky install"
+ },
+ "dependencies": {
+  "@chakra-ui/react": "^2.8.0",
+  "@emotion/react": "^11.11.1",
+  "@emotion/styled": "^11.11.0",
+  "@types/node": "20.4.4",
+  "@types/react": "18.2.16",
+  "@types/react-dom": "18.2.7",
+  "bootstrap": "^5.0.1",
+  "eslint": "8.45.0",
+  "eslint-config-next": "13.4.12",
+  "framer-motion": "^10.13.1",
+  "json-server": "^0.17.3",
+  "killport": "^1.0.2",
+  "next": "13.4.12",
+  "react": "18.2.0",
+  "react-dom": "18.2.0",
+  "reset-css": "^5.0.2",
+  "sass": "^1.64.1",
+  "sass-svg-uri": "^2.0.0",
+  "typescript": "5.1.6"
+ },
+ "devDependencies": {
+  "classnames": "^2.3.2",
+  "husky": "^8.0.3",
+  "json-to-scss": "^1.6.2",
+  "lint-staged": "^13.2.3",
+  "prettier": "^3.0.0",
+  "sass-lint-auto-fix": "^0.21.2",
+  "stylelint": "^15.10.2",
+  "stylelint-config-rational-order": "^0.1.2",
+  "stylelint-config-recommended-scss": "^12.0.0",
+  "stylelint-order": "^6.0.3",
+  "stylelint-prettier": "^4.0.0",
+  "stylelint-scss": "^5.0.1"
+ },
+ "lint-staged": {
+  "src/styles/**/*.{css,scss}": [
+   "npm run stylelint:fix"
+  ],
+  "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+   "npm run prettier:fix"
+  ]
+ }
+}
