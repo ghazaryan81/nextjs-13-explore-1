@@ -13,7 +13,7 @@
 @use "@/styles/components/atoms/box/vars" as box;
 @use "@/styles/components/atoms/typography/vars" as typography;
 @use "@/styles/components/atoms/info-box/vars" as info-box;
-@use "@/styles/components/atoms/info-hub/vars" as info-hub;
+@use "@/styles/components/atoms/list/vars" as list-info;
 @use "@/styles/components/atoms/nav-bar/vars" as nav-bar;
 
 :root {
@@ -60,8 +60,8 @@
   --info-box--#{$item}: #{$val};
  }
 
- @each $item, $val in info-hub.$info-hub {
-  --info-hub--#{$item}: #{$val};
+ @each $item, $val in list-info.$list {
+  --list--#{$item}: #{$val};
  }
 
  @each $item, $val in nav-bar.$nav-bar {

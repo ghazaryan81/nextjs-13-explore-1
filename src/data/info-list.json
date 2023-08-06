@@ -3,7 +3,7 @@
   {
    "icon": {
     "width": "2.7rem",
-    "iconHash": "icon-time"
+    "hash": "icon-time"
    },
    "txtBox": {
     "Line1": "Mon - Sat 9.00 - 18.0022",
@@ -13,7 +13,7 @@
   {
    "icon": {
     "width": "2.7rem",
-    "iconHash": "icon-email"
+    "hash": "icon-email"
    },
    "txtBox": {
     "Line1": "Email",
@@ -23,7 +23,7 @@
   {
    "icon": {
     "width": "2.7rem",
-    "iconHash": "icon-phone"
+    "hash": "icon-phone"
    },
    "txtBox": {
     "Line1": "Call Us",
